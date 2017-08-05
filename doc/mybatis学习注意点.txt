@@ -1,0 +1,59 @@
+	1.在写mybatis配置文件时 遇到了如下错误
+
+-------错误版本------
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<!-- 配置数据库连接信息 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://localhost:3306/springmvc-demo" />
+				<property name="username" value="root" />
+				<property name="password" value="111111" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="jhd/entity/mapper/userMapper.xml" />
+	</mappers>
+</configuration>
+-------错误原因------
+我是从mapper配置中直接粘贴的<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+第一次报错：文档根元素 "configuration" 必须匹配 DOCTYPE 根 "mapper"
+configuration中应该将mapper改为configuration
+
+
+第二次运行报错 ：必须声明元素类型 "configuration"。
+并且xml文档提示：Attribute "resource" must be declared for element type "mapper"
+将  http://mybatis.org/dtd/mybatis-3-mapper.dtd
+改为http://mybatis.org/dtd/mybatis-3-config.dtd
+
+-------正确版本------
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<!-- 配置数据库连接信息 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://localhost:3306/springmvc-demo" />
+				<property name="username" value="root" />
+				<property name="password" value="111111" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="jhd/entity/mapper/userMapper.xml" />
+	</mappers>
+</configuration>
+
+
+
+-------------------------------------------------------------------------------

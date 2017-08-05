@@ -7,19 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="dologin.jsp" method="post">
+	<form action="mylogin" method="post">
 		<p>
-			<label>用户名：</label>
-			<input name="username" value=""/>
+			<label>用户名：</label> 
+			<input name="username" value="" /> 
 			<label>密码：</label>
-			<input type="password" name="password" value=""/>
+			<input type="password" name="password" value="" />
 		</p>
 		<p>
-		<input type="submit" value="登录" class="login"/> 
+			<input type="submit" value="登录" />
 		</p>
 	</form>
-	
-	<jsp:useBean id="user" class="jhd.User"/>
-	用户名：<%=user.getUsername() %>
 </body>
 </html>

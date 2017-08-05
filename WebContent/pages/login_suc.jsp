@@ -15,5 +15,6 @@
 	%>
 	<h1>
 		欢迎<%=username%></h1>
+		<%@include file="welcome.jsp" %>
 </body>
 </html>
