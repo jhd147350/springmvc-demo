@@ -22,14 +22,17 @@
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		id="internalResourceViewResolver">
 		<!-- 前缀 -->
-		<property name="prefix" value="/pages/" />
+		<property name="prefix" value="/WEB-INF/pages/" />
 		<!-- 后缀 -->
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
+	<!--
 	<mvc:resources location="/pages/" mapping="/pages/**"/>
+	  
 	<mvc:view-controller path="/index" view-name="forward:/pages/index.jsp"/>
 	
 	
 	<mvc:view-controller path="/login" view-name="forward:/pages/login.jsp"/>
+	-->
 </beans>

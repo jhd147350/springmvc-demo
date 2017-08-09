@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import jhd.entity.User;
+import jhd.sign.entity.User;
 
 /**
  * 全局登录验证
@@ -45,7 +45,7 @@ public class AuthFilter implements Filter {
 				
 			} else {
 				System.out.println("没有用户->不是登录界面->跳转至登录界面:"+uri);
-				resp.sendRedirect(req.getContextPath() + "/login.jsp");
+				resp.sendRedirect(req.getContextPath() + "/user/login");
 			}
 		} else {// 有用户
 			System.out.println("有用户:"+uri);

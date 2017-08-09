@@ -1,4 +1,4 @@
-package jhd.entity;
+package jhd.sign.entity;
 
 public class Ticket {
 

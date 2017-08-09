@@ -1,4 +1,4 @@
-package jhd.entity;
+package jhd.sign.entity;
 
 public class User {
 	private int id;
@@ -33,4 +33,10 @@ public class User {
 		this.password = password;
 	}
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
+	}
+
+	
 }

@@ -7,17 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+main
 
-
-${user.username}
-${user.password}
-<hr>
-${user1.username}
-${user1.password}
-<hr>
-${user2.username}
-${user2.password}
-<hr>
-${map}
 </body>
 </html>
