@@ -26,7 +26,7 @@ public class UserControler {
 		if (service.login(username, password)) {
 			return "main";
 		}
-		return "redirect:/sign/login";
+		return "redirect:/index.jsp";
 	}
 
 }

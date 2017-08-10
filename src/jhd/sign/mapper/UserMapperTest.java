@@ -5,12 +5,14 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import jhd.config.MyBatisConfig;
 import jhd.sign.entity.User;
+import jhd.sign.service.UserService;
+import jhd.sign.service.UserServiceImp;
 
 public class UserMapperTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		SqlSessionFactory factory = MyBatisConfig.getFactoryInstance();
+		/*SqlSessionFactory factory = MyBatisConfig.getFactoryInstance();
 		SqlSession openSession = factory.openSession();
 		UserMapper mapper = openSession.getMapper(UserMapper.class);
 		User u = new User();
@@ -22,7 +24,10 @@ public class UserMapperTest {
 			System.out.println(u.getPassword());
 		} else {
 			System.err.println("err");
-		}
+		}*/
+		
+		UserService service=new UserServiceImp();
+		System.out.println(service.login("jhd", "jhd"));
 	}
 
 }

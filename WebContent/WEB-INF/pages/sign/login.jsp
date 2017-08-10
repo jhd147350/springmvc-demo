@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="dologin" method="post">
+	<form action="user/dologin" method="post">
 		<p>
 			<label>用户名：</label> 
 			<input name="username" value="" /> 
