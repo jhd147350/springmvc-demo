@@ -8,7 +8,7 @@ import jhd.sign.entity.User;
 import jhd.sign.service.UserService;
 import jhd.sign.service.UserServiceImp;
 
-public class UserMapperTest {
+public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

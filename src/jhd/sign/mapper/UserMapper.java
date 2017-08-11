@@ -17,8 +17,8 @@ public interface UserMapper {
 	 * @return
 	 */
 	@Select("select * from "+TABLE_NAME+" where username=#{u.username} and password=#{u.password}")
-	public User findUserByUsernameAndPassword(@Param("u") User u);
+	User findUserByUsernameAndPassword(@Param("u") User u);
 
 	@Insert("insert into "+TABLE_NAME+" (username,password) values(#{u.username},#{u.password})")
-	public int insertUser(User u);
+	int insertUser(User u);
 }

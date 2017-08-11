@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class MyBatisConfig {
-	static final String MYBATIS_CONFIG = "mybatis-config.xml";
+	/*static final String MYBATIS_CONFIG = "mybatis-config.xml";
 	static SqlSessionFactory factoryInstance;
 
 	static {
@@ -21,6 +21,6 @@ public class MyBatisConfig {
 	public static SqlSessionFactory getFactoryInstance() {
 		return factoryInstance;
 
-	}
+	}*/
 
 }
