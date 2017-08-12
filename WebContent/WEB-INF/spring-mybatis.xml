@@ -17,24 +17,23 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd
 		http://mybatis.org/schema/mybatis-spring
-		http://mybatis.org/schema/mybatis-spring.xsd"
-		>
+		http://mybatis.org/schema/mybatis-spring.xsd">
 
+	<!-- 支持线程池 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/springmvc-demo?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/springmvc-demo?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8" />
 		<!-- ?useUnicode=true&amp;characterEncoding=utf8 -->
 		<property name="username" value="root" />
 		<property name="password" value="147350jhd" />
 		<property name="maxActive" value="50" />
 	</bean>
-	
-	<!-- 自动扫描该包下的所有接口，并生成bean，最好该包下不要有其他没用的接口
-	命名空间xmlns:mybatis="http://mybatis.org/schema/mybatis-spring" 
-	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring
-		http://mybatis.org/schema/mybatis-spring.xsd"-->
-	<mybatis:scan base-package="jhd.sign.mapper"/>
-	
+
+	<!-- 自动扫描该包下的所有接口，并生成bean，最好该包下不要有其他没用的接口 命名空间xmlns:mybatis="http://mybatis.org/schema/mybatis-spring" 
+		xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd" -->
+	<mybatis:scan base-package="jhd.sign.mapper" />
+
 
 	<!-- sessionFactory -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
